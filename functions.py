@@ -23,6 +23,10 @@ def is_berry(fruit):
     """
 
     # TODO: replace this with your code
+    berries_list = ["strawberry", "raspberry", "blackberry", "currant"]
+
+    if fruit in berries_list:
+        return True
 
 
 def create_intro_note(profile1, profile2):
@@ -48,6 +52,7 @@ def create_fullname(profile):
     """
 
     # TODO: replace this with your code
+    return f"{profile[0]} {profile[1]}"
 
 
 def has_same_hometown(profile1, profile2):
@@ -59,6 +64,8 @@ def has_same_hometown(profile1, profile2):
     """
 
     # TODO: replace this with your code
+    if profile1[2] == profile2[2]:
+        return True
 
 
 def get_sqrt(x):
@@ -91,6 +98,7 @@ def div(x, y):
     """
 
     # TODO: replace this with your code
+    return x / y
 
 
 def avg(x, y):
@@ -101,6 +109,7 @@ def avg(x, y):
     """
 
     # TODO: replace this with your code
+    return (x + y) / 2
 
 
 def is_close_enough(x, y):
@@ -111,12 +120,17 @@ def is_close_enough(x, y):
     """
 
     # TODO: replace this with your code
+    if (x - y) < 0.0001:
+        return True
+    else:
+        return False
 
 
 def concat_all(items, *additional_items):
     """Add all arguments to the end of items and return None."""
 
     # TODO: replace this with your code
+
 
 
 if __name__ == "__main__":
