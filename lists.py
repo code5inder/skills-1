@@ -9,24 +9,40 @@ def get_words_by_first_letter(words, letter):
     """Return a list of all words that start with the given letter."""
 
     # TODO: replace this with your code
+    final_word_list = [word for word in words if letter == word[0]]
+    return final_word_list
 
 
 def filter_by_length(items, length):
     """Return a list of all items with the given length."""
 
     # TODO: replace this with your code
+    final_word_list = [word for word in items if length == len(word)]
+    return final_word_list
 
 
 def words_in_common(words1, words2):
     """Return strings that words1 and words2 have in common."""
 
     # TODO: replace this with your code
-
+    final_words = []
+    for i in words1:
+        for j in words2:
+            if i == j:
+                if i in final_words:
+                    pass
+                else:
+                    final_words.append(i)  
+    return final_words
 
 def every_other_item(items):
     """Return a list with every other element items (start with index 0)."""
 
     # TODO: replace this with your code
+    final_words = []
+    for i in range(0, len(items), 2):
+        final_words.append(items[i])
+    return final_words
 
 
 def smallest_n_items(items, n):
@@ -36,6 +52,11 @@ def smallest_n_items(items, n):
     """
 
     # TODO: replace this with your code
+    final_items = sorted(items)
+    final_items = sorted(final_items[:n], reverse=True)
+
+    return final_items
+
 
 
 def get_index(items, value):
@@ -46,6 +67,11 @@ def get_index(items, value):
     """
 
     # TODO: replace this with your code
+    final_items = sorted(items)
+    try:
+        return final_items.index(value)
+    except ValueError:
+        return None
 
 
 if __name__ == "__main__":
